@@ -1,0 +1,3 @@
+# Unexpected Behaviour with Negative $inc in MongoDB
+
+This example demonstrates an uncommon error that can occur when using the `$inc` operator in MongoDB with a negative value. While seemingly straightforward, decrementing a field using `$inc` can lead to unexpected behavior if not handled properly. The issue is that `$inc` directly modifies the field, potentially leading to negative values if not carefully controlled.  This might cause unexpected results or errors in subsequent operations that rely on non-negative values. The solution demonstrates a safer approach using `$max` to ensure non-negative field values.
